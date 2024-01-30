@@ -1,0 +1,752 @@
+/* Reset CSS */
+*{
+    /* Emmet */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.khoangcachtop10px
+{
+    padding: 10px 0px 0px 0px;
+}
+/* Style the top navigation bar */
+.imgtop
+{
+    padding: 10px 0px 0px 0px;
+}
+.topnav 
+{
+    overflow:hidden;
+    background-color: #929023;
+    display: block;
+    text-decoration: none;
+    border-radius: 50px 0px 50px 0px;
+}
+    /* Định dạng link điều hướng */
+.topnav a 
+{ 
+    float: left; 
+    display:block; 
+    color: #f2f2f2; 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none;
+}
+.trangchu
+{
+    background-color:#9f8216;
+    border-radius: 50px 0;
+}
+.dangki
+{
+    text-decoration: none;
+    color: #f2f2f2; 
+    padding: 10px 20px 10px 25px;
+}
+.dangnhap
+{
+    text-decoration: none;
+    color: #f2f2f2; 
+    padding: 10px 20px 10px 25px;
+    border-right: 1px solid #000000;
+}
+.Dangki1
+{
+    float: right; 
+    display: block;
+    background-color:#9f6116;
+    border-radius: 0px 0px 0px 146px;
+    overflow: hidden;
+}
+.Dangki1 a:hover
+{
+    background-color: #c9d981; 
+    color: rgb(0, 0, 0);
+}
+#top
+{
+    border-radius: 50px 0px 0px 0px;
+    background-color:  #ffffff;
+}
+    /* Thay đổi màu liên kết khi di chuột qua */
+.topnav a:hover 
+{
+    background-color: #c9d981; color: rgb(0, 0, 0);
+} 
+.row
+{
+    background-color: #ffffff; 
+}
+.row > div 
+{
+    text-align: center;
+}
+/* Tạo hai cột không bằng nhau, float cạnh nhau */ /* Cột trái */
+.leftcolumn { 
+    float: left; 
+    width: 75%;
+    
+}
+/* Cột phải */ 
+.rightcolumn
+{ 
+    float: right; 
+    width: 25%;
+    padding-left: 20px;
+    padding-right: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+} 
+
+
+    /* Clear float khác sau các cột */
+.row:after 
+{ 
+    content: "";
+    display: table; clear: both;
+}  
+.card
+{
+    background-color: white;
+    padding:20px; 
+    margin-top: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out 0s;
+    margin-left: 10px;
+} 
+.card:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0.2rem 1.2rem 0px;
+    transform: scale(1.02);
+}
+.card h2{
+    text-align: center;
+}
+.footer { padding: 10px; text-align: center; background: white;
+margin-top: 10px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100% - 32px);
+    animation: modalFadein ease 0.5s ;
+}
+.modal-colse{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 17px;
+}
+.modal-colse:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.modal-header {
+    height: 130px;
+    display: flex;
+    font-size: 30px;
+    background-color: #5b5f5e;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+.modal-header .modal-icon{
+    margin-right: 13px;
+}
+.modal-body{
+    padding: 16px;
+}
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.moda-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+#buy-tiket{
+    background-color: #231503;
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 16px 16px 26px 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+}
+#buy-tiket:hover{
+    opacity: 0.9;
+}
+.modal-footer{
+    padding: 16px;
+    display: block;
+    text-align: right;
+}
+.modal-footer a{
+    color: #2196F3;
+}
+@keyframes modalFadein {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+.Lienhe1 ul
+{
+    list-style: none;
+}
+.Lienhe2
+{
+    padding: 20px 0 0 0;
+}
+.ggmap
+{
+    padding: 10px 0 0 0;
+}
+.contact-concent {
+    margin-top: 32px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="fa-"] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+
+}
+.contact-form #form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.contact-form .form-submit-btn{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+    margin: 16px 9px 0 0;
+}
+.contact-form .form-submit-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.colum {
+    float: left;
+    padding: 0 8px;
+}
+.colum-full{
+    width: 100%;
+}
+.colum-two{
+    width: 50%;
+}
+.colum-three{
+    width: 33.3333%;
+}
+
+
+.moda{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+}
+.moda.open{
+    display: flex;
+}
+.moda-container{
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100% - 32px);
+    animation: modalFadein ease 0.5s ;
+}
+.moda-colse{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 17px;
+}
+.moda-colse:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.moda-header {
+    height: 130px;
+    display: flex;
+    font-size: 30px;
+    background-color: #5b5f5e;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+.moda-header .moda-icon{
+    margin-right: 13px;
+}
+.moda-body{
+    padding: 16px;
+}
+.moda-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.moda-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-tiket:hover{
+    opacity: 0.9;
+}
+.moda-footer{
+    padding: 16px;
+    display: block;
+    text-align: right;
+}
+.moda-footer a{
+    color: #2196F3;
+}
+@keyframes modaFadein {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+.slideanh
+{
+    position: relative;
+    display: flex;
+    background-color: white;
+    margin-top: 20px; 
+    text-align:center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 1080px;
+    min-height: 540px;
+    max-width: 1080px;
+    max-height: 540px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.slideanh i
+{
+    font-size: 50px;
+}
+
+.slideanh .chuyen1
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+.slideanh .slide
+{
+    width: 100%;
+}
+.slideanh .chuyen2
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    right: 0; /* Đặt vị trí bên trái */
+    z-index: 2;
+}
+
+.nutbam
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+
+
+
+* {
+    box-sizing:border-box
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1080px;
+    max-height: 500px;
+    min-width: 1080px;
+    min-height: 500px;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+  }
+  /* Ẩn các slider */
+  .mySlides {
+      display: none;
+  }
+   
+  /* định dạng các chấm chuyển đổi các slide */
+  .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /* khi được hover, active đổi màu nền */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+   
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+   
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .anh1href:hover
+  {
+    background-color: brown;
+  }
+
+#wrapper
+{
+    max-width: 1170px;
+    margin: 0 auto;
+    color: #000;
+    line-height: 1.15;
+}
+#wrapper .headline
+{
+    margin: 20px 0;
+}
+#wrapper h3
+{
+    color: #000;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 2px solid #bebebe;
+    display:inline-block;
+}
+body
+{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.card-news .product a
+{
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+.card-news .product a.product-cat
+{
+    font-size: 11px;
+    color: #9e9e9e;
+    padding: 3px 0px;
+}
+.card-news .product a.product-name
+{
+    color: #000000;
+    padding: 3px 0px;
+    text-align: left;
+}
+
+.card-news .product .product-price
+{
+    color: #111;
+    float: left;
+    padding: 10px 0 2px 0px;
+    font-weight: 600;
+}
+
+/* Thêm định dạng thẻ cho bài viết */
+.card-news 
+{
+    width:18%;
+    height: 290px;
+    background-color: white ;
+    padding: 5px; 
+    margin: 10px;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+}
+.card-news:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0.2rem 1.2rem 0px;
+   transform: scale(1.02);
+}
+.image 
+{ 
+    padding-top: 20px;
+    width:100%; 
+    height:190px; 
+}
+
+#nav, .subnav {
+    list-style-type: none; /*xóa dấu chấm li*/
+    z-index: 3;
+
+}
+#nav > li {
+    display: inline-block;
+}
+#nav {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a{     /*thuộc tính chỉ ảnh hưởng cấp 1 ko ảnh hưởng đến cấp 2 (ở more)*/
+    color: #fff;
+}
+
+#nav li a{
+    text-decoration: none; /*tắt đường gạch chân*/
+    line-height: var(--height);
+    padding: 0 16px;
+    display: block;
+    color: #f2f2f2; 
+    text-align: center; 
+    text-decoration: none;
+}
+
+#nav li:hover .subnav { /*ghi đè lên none ở dưới và mạnh hơn dưới và hiện lên*/
+    display: block;
+} 
+.trangchu
+{
+    background-color:#9f8216;
+    border-radius: 50px 0;
+}
+
+#nav .subnav li:hover a,  /*link*/
+#nav>li:hover>a {
+    color: #000;
+    background-color: #c9d981;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0.2rem 1.2rem 0px;
+    transform: scale(1.03);
+}
+
+#nav .subnav{
+    min-width: 160px;
+    display: none;/*ẩn*/
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 72%) 5px 5px 3px;
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 8px 12px;
+    line-height: 22.5px;/*được tính bằng padding top *2 + số thứ 2 ô dưới padding*/
+    
+}
+
+#nav .nav-arrow-down {
+    color: rgb(236, 242, 242);
+}
+
+#header{
+    --height: 46px;
+    height: var(--height);
+    background-color: #929023;
+    display: block;
+    text-decoration: none;
+    border-radius: 50px 0px 50px 0px;
+}
+.header-zindex-1{
+    z-index: 3;
+}
+.nav2
+{
+    position: absolute;
+    right: 0;
+}
+.container {
+    overflow: hidden;
+  }
+  
+  .filterDiv {
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn.activd {
+    background-color: #666;
+    color: white;
+    color: #000;
+    transform: scale(1.05);
+  }
+  .card2
+  {
+    background-color: white;
+    padding: 20px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+
+/* responsve--------------- */
+@media (max-width: 1405px) {
+    .slideanh {
+        position: relative;
+    display: flex;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 100%; 
+    min-height: 525px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 540px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    }
+    .slideshow-container {
+         max-width: 100%; 
+        max-height: 500px;
+         min-width: 100%; 
+        min-height: 500px;
+        position: relative;
+        margin: auto;
+        z-index: 1;
+  }
+  .rightcolumn {
+    float: right;
+    width: 22%;
+    padding-left: 20px;
+    padding-right: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.leftcolumn {
+    float: left;
+    width: 78%;
+}
+}
+
+
+.containe{  margin: auto; background:darkkhaki; padding:20px; font-size: 1.2em}
+table {  width: 100%;  border-collapse:collapse; }
+th, td { border: 1px solid black;  padding: 6px;  text-align: center; }
+caption {  font-weight: 600;  font-size: 1.2em;}
+.containe button{  width: 60px; height: 25px; }
+#anh{
+    width: 100%;
+}

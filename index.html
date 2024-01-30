@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium coffee</title>
+    <link rel="icon" type="image/x-icon" href="./icon wed/iconweb.png">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./hang hoa/details.html">
+</head>
+<body>
+    <div class="heade">
+        <div class="Dangki1">
+            <a href="#" class="dangki" style="float: right;">Đăng Kí</a>
+            <a href="#" class="dangnhap" style="float: right;">Đăng Nhập</a>
+        </div>
+        <div class="imgtop">
+            <a href="./index.html">
+                <img  width="487" height="94" src="./icon wed/cropped-cofe-hao-han-1.png" sizes="(max-width: 487px) 100vw, 487px">
+            </a>
+        </div>
+    </div>
+    <div id="header" class="header-zindex-1">
+        <!-- begin nav -->
+       <ul id="nav"><li>
+            <a href="" class="trangchu">
+                Mặt Hàng
+                <i class="nav-arrow-down fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+                <li><a href="/coffee rang xay.html">Coffee rang xay</a></li>
+                <li><a href="/coffee hoa tan.html">coffee hòa tan</a></li>
+                <li><a href="/coffee cans.html">Coffee cans</a></li>
+                
+            </ul>
+        </li>
+        <li><a href="/thanhtoan.html">Thanh Toán</a></li>
+        <li><a href="/Lienhe.html">Liên hệ</a></li>
+        <li><a href="/doitra.html">Chính sách đổi trả</a></li>
+       </ul>
+        <!-- end nav -->
+        <ul id="nav" class="nav2">
+            <li><a href="/index.html" class="trangchu">Trang chủ</a></li><!--Không có id sẽ chạy lên đầu trang khi click vào-->
+        </ul>
+    </div>
+    <!-- đăng kí ..........................-->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-cpntainer">
+            <div class="modal-colse js-modal-close">
+                <i class="modal-icon-close fa-solid fa-xmark"></i>
+            </div>
+            <header class="modal-header">
+                Đăng Kí
+            </header>
+            <form action="">
+                <div class="modal-body">
+                    <label for="How many" class="modal-label">
+                    Tên tài khoản:
+                    </label>
+                <input id="How many" type="text" class="moda-input" placeholder="Nhập Tên Tài Khoản" required id="form-control">
+                <label for="Enter email" class="modal-label">
+                    Email:
+                    </label>
+                <input id="Enter email" type="email" class="moda-input" placeholder="Nhập email" required id="form-control">
+                <label for="Enter email" class="modal-label">
+                    Mật Khẩu:
+                    </label>
+                <input id="Enter email" type="text" class="moda-input" placeholder="Nhập Mật Khẩu" required id="form-control">
+                <button id="buy-tiket">
+                    Đăng Kí
+                </button>
+                </div>
+            </form>
+            
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const header = document.querySelector('#header')
+        const buyBtns = document.querySelectorAll('.dangki')
+        const modal = document.querySelector('.js-modal')
+        const modalclose =document.querySelector('.js-modal-close')
+        const modalcontainer=document.querySelector('.js-modal-cpntainer')
+        function showBuyTikets() {
+            modal.classList.add('open')
+            header.classList.remove('header-zindex-1')
+        }
+        function closeBuyTikets() {
+            modal.classList.remove('open')
+            header.classList.add('header-zindex-1')
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTikets)
+        }
+        modalclose.addEventListener('click', closeBuyTikets)
+        modal.addEventListener('click', closeBuyTikets)
+        modalcontainer.addEventListener('click', function(even){
+            even.stopPropagation()
+        })
+    </script>
+    <!-- đăng kí...................... -->
+     <!-- đăng Nhập ..........................-->
+     <div class="moda js-moda">
+        <div class="moda-container js-moda-cpntainer">
+            <div class="moda-colse js-moda-close">
+                <i class="moda-icon-close fa-solid fa-xmark"></i>
+            </div>
+            <header class="moda-header">
+                Đăng Nhập
+            </header>
+            
+            <form action="">
+                <div class="moda-body">
+                    <label for="How many" class="moda-label">
+                    Tên tài khoản: 
+                    </label>
+                <input id="How many" type="text" class="moda-input" placeholder="Nhập Tên Tài Khoản" required id="form-control">
+                <label for="Enter email" class="moda-label">
+                    Mật Khẩu:
+                    </label>
+                <input id="Enter email" type="text" class="moda-input" placeholder="Nhập Mật Khẩu" required id="form-control">
+                <button id="buy-tiket">
+                    Đăng Nhập
+                </button>
+                
+                </div>
+            </form>
+            <footer class="moda-footer">
+                <p class="moda-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const dangnhaps = document.querySelectorAll('.dangnhap')
+        const moda = document.querySelector('.js-moda')
+        const modaclose =document.querySelector('.js-moda-close')
+        const modacontainer=document.querySelector('.js-moda-cpntainer')
+        function showBuyTike() {
+            moda.classList.add('open')
+            header.classList.remove('header-zindex-1')
+        }
+        function closeBuyTike() {
+            moda.classList.remove('open')
+            header.classList.add('header-zindex-1')
+        }
+
+        for (const dangnhap of dangnhaps) {
+            dangnhap.addEventListener('click', showBuyTike)
+        }
+        modaclose.addEventListener('click', closeBuyTike)
+        moda.addEventListener('click', closeBuyTike)
+        modacontainer.addEventListener('click', function(even){
+            even.stopPropagation()
+        })
+    </script>
+    <!-- đăng Nhập...................... -->
+    <div class="row">
+        <div class="leftcolumn">
+                <div class="slideanh">
+                    <div id="chuyen1" class="chuyen1">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="slide">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <a href="/coffee rang xay.html" class="anh1href">
+                                    <img   src="./icon wed/rang xay.png" style="width:100%">
+                                </a>
+                            </div>
+                           
+                            <div class="mySlides fade">
+                                <a href="/coffee hoa tan.html" class="anh1href">
+                                    <img src="./icon wed/hoa tan.png" style="width:100%">
+                                </a>
+                            </div>
+                           
+                            <div class="mySlides fade">
+                                <a href="/coffee cans.html" class="anh1href">
+                                    <img src="./icon wed/coffee cans.png" style="width:100%">
+                                </a>
+                            </div>
+                          </div>
+                           
+                          <div class="nutbam">
+                            <span class="dot" onclick="currentSlide(0)"></span> 
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                          </div>
+                    </div>
+                    <div id="chuyen2" class="chuyen2">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <script>
+                        // Đặt biến để theo dõi slide hiện tại
+                            var currentSlideIndex = 0;
+
+                            // Lấy danh sách các slides và các chấm (dots)
+                            const slide = document.getElementsByClassName("mySlides");
+                            const dots = document.getElementsByClassName("dot");
+
+                            // Lấy phần tử "chuyen1" và "chuyen2" theo id
+                            const chuyen1 = document.getElementById('chuyen1');
+                            const chuyen2 = document.getElementById('chuyen2');
+
+                            // Xử lý sự kiện click cho phần tử "chuyen1"
+                            chuyen1.addEventListener('click', function() {
+                                currentSlideIndex--;
+                                if (currentSlideIndex < 0) {
+                                    currentSlideIndex = slide.length - 1;
+                                }
+                                currentSlide(currentSlideIndex);
+                            });
+
+                            // Xử lý sự kiện click cho phần tử "chuyen2"
+                            chuyen2.addEventListener('click', function() {
+                                currentSlideIndex++;
+                                if (currentSlideIndex >= slide.length) {
+                                    currentSlideIndex = 0;
+                                }
+                                currentSlide(currentSlideIndex);
+                            });
+
+                            // Hàm hiển thị slide theo chỉ số
+                            function currentSlide(n) {
+                                for (var i = 0; i < slide.length; i++) {
+                                    slide[i].style.display = "none";
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slide[n].style.display = "block";
+                                dots[n].className += " active";
+                            }
+
+                            // Hàm hiển thị slide tự động
+                            function showSlides() {
+                                 currentSlide(currentSlideIndex);
+
+                                // currentSlideIndex++;
+
+                                // if (currentSlideIndex >= slide.length) {
+                                //     currentSlideIndex = 0;
+                                // }
+
+                                // setTimeout(showSlides, 10000); // Tự động chuyển đổi slide sau 10 giây
+                            }
+
+                            // Bắt đầu hiển thị slide tự động
+                            showSlides();
+
+                  </script>
+                </div>
+                <div class="" id="wrapper">
+                    <div class="headline">
+                        <h3>Sản Phẩm nổi Bật</h3>
+                    </div>
+                </div>
+                <div class="card-news">
+                    <a href="/hang hoa/hoatan1.html"><img src="./icon wed/hoa-tan-1.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">Hòa tan</a>
+                        <a href="" class="product-name">Cà phê hòa tan Trung Nguyên 204g</a>
+                        <div class="product-price">52.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="/hang hoa/hoatan2.html"><img src="./icon wed/hoa-tan-2.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">Hòa tan</a>
+                        <a href="" class="product-name">Cà phê hòa tan G7 30g</a>
+                        <div class="product-price">44.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="/hang hoa/hoatan3.html"><img src="./icon wed/hoa-tan-3.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">Hòa tan</a>
+                        <a href="" class="product-name">Cà phê sữa hòa tan Hightlands 850   </a>
+                        <div class="product-price">82.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="/hang hoa/cans1.html"><img src="./icon wed/cans-1.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">Cans</a>
+                        <a href="" class="product-name">Cà phê lon Hightlands</a>
+                        <div class="product-price">63.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="/hang hoa/cans2.html"><img src="./icon wed/cans-2.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">Cans</a>
+                        <a href="" class="product-name"> Cà phê lon nguyên thùng NesCafé</a>
+                        <div class="product-price">63.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+                
+                <div class="card-news">
+                    <a href="/hang hoa/cans3.html"><img src="./icon wed/cans-3.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">Cans</a>
+                        <a href="" class="product-name">Cà phê lon nguyên thùng Birdy</a>
+                        <div class="product-price">63.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="./hang hoa/rangxay1.html"><img src="./icon wed/rang-xay-1.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">rang xay</a>
+                        <a href="" class="product-name">Cà phê rang xay Highlands Moka 200g</a>
+                        <div class="product-price">120.000 Vnđ</div>
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="./hang hoa/rangxay2.html"><img src="./icon wed/rang-xay-2.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">rang xay</a>
+                        <a href="" class="product-name">Cà phê Trung Nguyên chế phin 1 gói 500g</a>
+                        <div class="product-price">100.000 Vnđ</div>                    
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="./hang hoa/rangxay3.html"><img src="./icon wed/rang-xay-3.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">rang xay</a>
+                        <a href="" class="product-name">Cà phê Trung Nguyên Sáng tạo số 2 gói 340g</a>
+                        <div class="product-price">80.000 Vnđ</div>                    
+                    </div>
+    
+                </div>
+                <div class="card-news">
+                    <a href="./hang hoa/rangxay4.html"><img src="./icon wed/rang-xay-4.webp" class="image"></a>
+                    <div class="product">
+                        <a href="" class="product-cat">rang xay</a>
+                        <a href="" class="product-name">Cà phê H'ren RobustaRobusta 500g</a>
+                        <div class="product-price">120.000 Vnđ</div> 
+                    </div>
+    
+                </div>
+        </div>
+        <div class="rightcolumn">
+                <div class="card">
+                    <h2>Giới Thiệu</h2>
+                    <iframe width="250" height="130" src="https://www.youtube.com/embed/h_EATZ9T1cs" allowfullscreen></iframe>
+                    <p>Những hạt cà phê chất lượng được mang đến từ nông trường hữu cơ</p>
+               </div>
+               <div class="card">
+                   <h2>Liên hệ</h2>
+                   <p>Điện thoại: 0825144923</p>
+                   <p>Email: cofeehaohang@gmail.com</p>
+                </div>
+                <div class="card">
+                   <h2>Follow Me</h2>
+                   <img width="50%" src="./icon wed/folow.jpg">
+                </div>
+        </div>
+        <div class="leftcolumn">
+            <div class="" id="wrapper">
+                <div class="headline">
+                    <h3>Coffee rang xay</h3>
+                </div>
+            </div>
+        <div class="card2">
+                <div id="myBtnContainer">
+                  <button class="btn activd" onclick="filterSelection('all')"> Tất cả</button>
+                  <button class="btn" onclick="filterSelection('rangxay')"> Coffee rang xay</button>
+                  <button class="btn" onclick="filterSelection('hoatan')"> Coffee hòa tan</button>
+                  <button class="btn" onclick="filterSelection('cans')"> Coffee cans</button>
+                </div>
+                
+                <div class="container">
+<!-- rang xay------------- -->
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay1.html"><img src="./icon wed/rang-xay-1.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê rang xay Highlands Moka 200g</a>
+                            <div class="product-price">120.000 Vnđ</div>
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay2.html"><img src="./icon wed/rang-xay-2.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê Trung Nguyên chế phin 1 gói 500g</a>
+                            <div class="product-price">100.000 Vnđ</div>                    
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay3.html"><img src="./icon wed/rang-xay-3.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê Trung Nguyên Sáng tạo số 2 gói 340g</a>
+                            <div class="product-price">80.000 Vnđ</div>                    
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay4.html"><img src="./icon wed/rang-xay-4.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê H'ren RobustaRobusta 500g</a>
+                            <div class="product-price">120.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay5.html"><img src="./icon wed/rang-xay-5.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê rang xay Phương Vy Moka 500g</a>
+                            <div class="product-price">70.000 Vnđ</div>
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay6.html"><img src="./icon wed/rang-xay-6.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê Mê TrangTrang MC số 1 gói 500g</a>
+                            <div class="product-price">110.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay7.html"><img src="./icon wed/rang-xay-7.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê phin Trung Nguyên 500g</a>
+                            <div class="product-price">65.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay8.html"><img src="./icon wed/rang-xay-8.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê phin Phương Vy 500g</a>
+                            <div class="product-price">55.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay9.html"><img src="./icon wed/rang-xay-9.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê hòa tan Trung Nguyên 216g</a>
+                            <div class="product-price">64.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv rangxay">
+                        <a href="./hang hoa/rangxay10.html"><img src="./icon wed/rang-xay-10.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">rang xay</a>
+                            <a href="" class="product-name">Cà phê phin Trung Nguyên 500g</a>
+                            <div class="product-price">110.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+<!-- rang xay------------- -->
+<!-- Hòa Tan------------- -->
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan1.html"><img src="./icon wed/hoa-tan-1.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan Trung Nguyên 204g</a>
+                            <div class="product-price">52.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan2.html"><img src="./icon wed/hoa-tan-2.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan G7 30g</a>
+                            <div class="product-price">44.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan3.html"><img src="./icon wed/hoa-tan-3.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê sữa hòa tan Hightlands 850   </a>
+                            <div class="product-price">82.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan4.html"><img src="./icon wed/hoa-tan-4.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan MacCoffee 280g</a>
+                            <div class="product-price">75.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan5.html"><img src="./icon wed/hoa-tan-5.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê phin TNI King Coffee 450g</a>
+                            <div class="product-price">75.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan6.html"><img src="./icon wed/hoa-tan-6.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan VinaCafé</a>
+                            <div class="product-price">75.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan7.html"><img src="./icon wed/hoa-tan-7.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan The Coffee House</a>
+                            <div class="product-price">39.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan8.html"><img src="./icon wed/hoa-tan-8.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê đen hòa tan NesCafé Red Cup 30g</a>
+                            <div class="product-price">31.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan9.html"><img src="./icon wed/hoa-tan-9.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan Trung Nguyên 216g</a>
+                            <div class="product-price">31.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan10.html"><img src="./icon wed/hoa-tan-10.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan NesCafé 240g</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan11.html"><img src="./icon wed/hoa-tan-11.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan NesCafé 240g</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan12.html"><img src="./icon wed/hoa-tan-12.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan K Coffee 612g</a>
+                            <div class="product-price">109.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan13.html"><img src="./icon wed/hoa-tan-13.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan NesCafé 240g</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan14.html"><img src="./icon wed/hoa-tan-14.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan G7 200g</a>
+                            <div class="product-price">60.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv hoatan">
+                        <a href="/hang hoa/hoatan15.html"><img src="./icon wed/hoa-tan-15.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Hòa tan</a>
+                            <a href="" class="product-name">Cà phê hòa tan MacCoffee 160g</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+<!-- Hòa Tan------------- -->
+<!-- Cans------------- -->
+
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans1.html"><img src="./icon wed/cans-1.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon (lốc) Hightlands</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans2.html"><img src="./icon wed/cans-2.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name"> Cà phê lon nguyên thùng NesCafé</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans3.html"><img src="./icon wed/cans-3.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon nguyên thùng Birdy</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans4.html"><img src="./icon wed/cans-4.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon (lốc) NesCofé</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans5.html"><img src="./icon wed/cans-5.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon The Coffee House</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans6.html"><img src="./icon wed/cans-6.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon The Coffee House</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans7.html"><img src="./icon wed/cans-7.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon The Coffee House</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans8.html"><img src="./icon wed/cans-8.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon The Coffee House</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans9.html"><img src="./icon wed/cans-9.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon The Coffee House</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+                    <div class="card-news filterDiv cans">
+                        <a href="/hang hoa/cans10.html"><img src="./icon wed/cans-10.webp" class="image"></a>
+                        <div class="product">
+                            <a href="" class="product-cat">Cans</a>
+                            <a href="" class="product-name">Cà phê lon The Coffee House</a>
+                            <div class="product-price">63.000 Vnđ</div> 
+                        </div>
+
+                    </div>
+<!-- Cans------------- -->
+                </div>
+                
+                <script>
+                filterSelection("all")
+                        function filterSelection(c) {
+                        var x, i;
+                        x = document.getElementsByClassName("filterDiv");
+                        if (c == "all") c = "";
+                        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                        for (i = 0; i < x.length; i++) {
+                            w3RemoveClass(x[i], "show");
+                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                        }
+                        }
+
+                        // Show filtered elements
+                        function w3AddClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
+                            }
+                        }
+                        }
+
+                        // Hide elements that are not selected
+                        function w3RemoveClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                            }
+                        }
+                        element.className = arr1.join(" ");
+                        }
+
+                        // Add active class to the current control button (highlight it)
+                        var btnContainer = document.getElementById("myBtnContainer");
+                        var btns = btnContainer.getElementsByClassName("btn");
+                        for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener("click", function() {
+                            var current = document.getElementsByClassName("activd");
+                            current[0].className = current[0].className.replace(" activd", "");
+                            this.className += " activd";
+                        });
+                        }
+                </script>
+          
+        </div>
+    <div class="footer">
+        <h4>Cảm ơn quý khách đã ủng hộ sản phẩm</h4>
+    </div>
+</body>
+</html>

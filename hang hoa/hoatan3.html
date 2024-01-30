@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium coffee</title>
+    <link rel="icon" type="image/x-icon" href="./icon wed/iconweb.png">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./hang hoa/details.html">
+</head>
+<body>
+    <div class="heade">
+        <div class="Dangki1">
+            <a href="#" class="dangki" style="float: right;">Đăng Kí</a>
+            <a href="#" class="dangnhap" style="float: right;">Đăng Nhập</a>
+        </div>
+        <div class="imgtop">
+            <img  width="487" height="94" src="./icon wed/cropped-cofe-hao-han-1.png" sizes="(max-width: 487px) 100vw, 487px">
+        </div>
+    </div>
+    <div id="header" class="header-zindex-1">
+        <!-- begin nav -->
+       <ul id="nav"><li>
+            <a href="" class="trangchu">
+                Mặt Hàng
+                <i class="nav-arrow-down fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+                <li><a href="/coffee rang xay.html">Coffee rang xay</a></li>
+                <li><a href="/coffee hoa tan.html">coffee hòa tan</a></li>
+                <li><a href="/coffee hoa tan.html">Coffee cans</a></li>
+                
+            </ul>
+        </li>
+        <li><a href="#">Thanh Toán</a></li>
+        <li><a href="/Lienhe.html">Liên hệ</a></li>
+        <li><a href="/doitra.html">Chính sách đổi trả</a></li>
+       </ul>
+        <!-- end nav -->
+        <ul id="nav" class="nav2">
+            <li><a href="/index.html" class="trangchu">Trang chủ</a></li><!--Không có id sẽ chạy lên đầu trang khi click vào-->
+        </ul>
+    </div>
+    <!-- đăng kí ..........................-->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-cpntainer">
+            <div class="modal-colse js-modal-close">
+                <i class="modal-icon-close fa-solid fa-xmark"></i>
+            </div>
+            <header class="modal-header">
+                Đăng Kí
+            </header>
+            <div class="modal-body">
+                <label for="How many" class="modal-label">
+                Tên tài khoản:
+                </label>
+            <input id="How many" type="text" class="moda-input" placeholder="Nhập Tên Tài Khoản">
+            <label for="Enter email" class="modal-label">
+                Email:
+                </label>
+            <input id="Enter email" type="email" class="moda-input" placeholder="Nhập email">
+            <label for="Enter email" class="modal-label">
+                Mật Khẩu:
+                </label>
+            <input id="Enter email" type="text" class="moda-input" placeholder="Nhập Mật Khẩu">
+            <button id="buy-tiket">
+                Đăng Kí
+            </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const header = document.querySelector('#header')
+        const buyBtns = document.querySelectorAll('.dangki')
+        const modal = document.querySelector('.js-modal')
+        const modalclose =document.querySelector('.js-modal-close')
+        const modalcontainer=document.querySelector('.js-modal-cpntainer')
+        function showBuyTikets() {
+            modal.classList.add('open')
+            header.classList.remove('header-zindex-1')
+        }
+        function closeBuyTikets() {
+            modal.classList.remove('open')
+            header.classList.add('header-zindex-1')
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTikets)
+        }
+        modalclose.addEventListener('click', closeBuyTikets)
+        modal.addEventListener('click', closeBuyTikets)
+        modalcontainer.addEventListener('click', function(even){
+            even.stopPropagation()
+        })
+    </script>
+    <!-- đăng kí...................... -->
+     <!-- đăng Nhập ..........................-->
+     <div class="moda js-moda">
+        <div class="moda-container js-moda-cpntainer">
+            <div class="moda-colse js-moda-close">
+                <i class="moda-icon-close fa-solid fa-xmark"></i>
+            </div>
+            <header class="moda-header">
+                Đăng Nhập
+            </header>
+            <div class="moda-body">
+                <label for="How many" class="moda-label">
+                Tên tài khoản:
+                </label>
+            <input id="How many" type="text" class="moda-input" placeholder="Nhập Tên Tài Khoản">
+            <label for="Enter email" class="moda-label">
+                Mật Khẩu:
+                </label>
+            <input id="Enter email" type="text" class="moda-input" placeholder="Nhập Mật Khẩu">
+            <button id="buy-tiket">
+                Đăng Nhập
+            </button>
+            </div>
+            <footer class="moda-footer">
+                <p class="moda-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const dangnhaps = document.querySelectorAll('.dangnhap')
+        const moda = document.querySelector('.js-moda')
+        const modaclose =document.querySelector('.js-moda-close')
+        const modacontainer=document.querySelector('.js-moda-cpntainer')
+        function showBuyTike() {
+            moda.classList.add('open')
+            header.classList.remove('header-zindex-1')
+        }
+        function closeBuyTike() {
+            moda.classList.remove('open')
+            header.classList.add('header-zindex-1')
+        }
+
+        for (const dangnhap of dangnhaps) {
+            dangnhap.addEventListener('click', showBuyTike)
+        }
+        modaclose.addEventListener('click', closeBuyTike)
+        moda.addEventListener('click', closeBuyTike)
+        modacontainer.addEventListener('click', function(even){
+            even.stopPropagation()
+        })
+    </script>
+    <!-- đăng Nhập...................... -->
+    <div class="row">
+        <div class="leftcolumn">
+
+            <div class="card "> 
+                <h1>Premium Coffee</h1>
+                <h2 >
+                    "Mang đến những loại cà phê hão hạng"
+                </h2>
+            <div class="leftcolumn1">
+                <div class="slideanh">
+                    <div id="chuyen1" class="chuyen1">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="slide">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <a href="/coffee rang xay.html" class="anh1href">
+                                    <img src="/hang hoa/icon wed/c9.1.webp" style="width:100%">
+                                </a>
+                            </div>
+                            <div class="mySlides fade">
+                                <a href="/coffee hoa tan.html" class="anh1href">
+                                    <img src="/hang hoa/icon wed/c9.2.webp" style="width:100%">
+                                </a>
+                            </div>
+                           
+                            <div class="mySlides fade">
+                                <a href="/coffee hoa tan.html" class="anh1href">
+                                    <img src="/hang hoa/icon wed/c9.3.webp" style="width:100%">
+                                </a>
+                            </div>
+                           
+                            <div class="mySlides fade">
+                                <a href="/coffee cans.html" class="anh1href">
+                                    <img src="/hang hoa/icon wed/c9.4.webp" style="width:100%">
+                                </a>
+                            </div>
+                          </div>
+                           
+                          <div class="nutbam">
+                            <span class="dot" onclick="currentSlide(0)"></span> 
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                          </div>
+                    </div>
+                    <div id="chuyen2" class="chuyen2">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <script>
+                        // Đặt biến để theo dõi slide hiện tại
+                            var currentSlideIndex = 0;
+
+                            // Lấy danh sách các slides và các chấm (dots)
+                            const slides = document.getElementsByClassName("mySlides");
+                            const dots = document.getElementsByClassName("dot");
+
+                            // Lấy phần tử "chuyen1" và "chuyen2" theo id
+                            const chuyen1 = document.getElementById('chuyen1');
+                            const chuyen2 = document.getElementById('chuyen2');
+
+                            // Xử lý sự kiện click cho phần tử "chuyen1"
+                            chuyen1.addEventListener('click', function() {
+                                currentSlideIndex--;
+                                if (currentSlideIndex < 0) {
+                                    currentSlideIndex = slides.length - 1;
+                                }
+                                currentSlide(currentSlideIndex);
+                            });
+
+                            // Xử lý sự kiện click cho phần tử "chuyen2"
+                            chuyen2.addEventListener('click', function() {
+                                currentSlideIndex++;
+                                if (currentSlideIndex >= slides.length) {
+                                    currentSlideIndex = 0;
+                                }
+                                currentSlide(currentSlideIndex);
+                            });
+
+                            // Hàm hiển thị slide theo chỉ số
+                            function currentSlide(n) {
+                                for (var i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slides[n].style.display = "block";
+                                dots[n].className += " active";
+                            }
+
+                            // Hàm hiển thị slide tự động
+                            function showSlides() {
+                                currentSlide(currentSlideIndex);
+
+                                currentSlideIndex++;
+
+                                if (currentSlideIndex >= slides.length) {
+                                    currentSlideIndex = 0;
+                                }
+
+                                // setTimeout(showSlides, 10000); // Tự động chuyển đổi slide sau 10 giây
+                            }
+
+                            // Bắt đầu hiển thị slide tự động
+                            showSlides();
+
+                  </script>
+                </div> 
+    
+            </div>
+            <div class="rightcolumn1">
+                <h2 class="nametop">Cà phê sữa hòa tan Hightlands</h2>
+                <div class="thanhtoan">
+                    <h3 class="money">82.000(Vnđ)</h3>
+                    <h3 class="oldmoney">20.000(Vnđ)</h3>
+                    <div class="khoangcachtop10px"></div>
+                    <h2 class="MuaHang">Mua</h2>
+                </div>
+        </div>
+        <div class="center">
+            <h2>Thông tin sản phẩm</h2>
+            <h3 class="text1">Sản phẩm cà phê hòa tan Highlands được làm từ những hạt cà phê tinh túy được sàng lọc kỹ và chế biến theo quy trình công nghệ hiện đại, khép kín. Cà phê hoà tan Highlands 850g (50 gói x 17g) tiện lợi, giúp pha chế những ly cà phê hòa tan nhanh chóng, mang đến mùi hương cà phê thơm ngon, quyến rũ.</h3>
+            <div class="khoangcachtop10px"></div>
+            <div class="thongtin1">
+                <h4 class="text2">Thương hiệu</h4>
+                <h4 class="text2">Nơi sản xuất</h4>
+                <h4 class="text2">Loại sản phẩm</h4>
+                <h4 class="text2">Thành phần</h4>
+                <h4 class="text2">Lượng đường</h4>
+                <h4 class="text2">Hương vị</h4>
+                <h4 class="text2">Khối lượng</h4>
+                <h4 class="text2">Đóng gói</h4>
+                <h4 class="text2">Sử dụng</h4>
+                <h4 class="text2">Lưu ý</h4>
+            </div>
+            <div class="thongtin2">
+                <h4 class="text3">Hightlands</h4>
+                <h4 class="text3">Việt Nam</h4>
+                <h4 class="text3">Cà phê sữa</h4>
+                <h4 class="text3">Đường mịn 40%, bột kem tách bơ 37%, cà phê hòa tan 13%, hương liệu tổng hợp</h4>
+                <h4 class="text3">Có đường</h4>
+                <h4 class="text3">Cà Phê sữa</h4>
+                <h4 class="text3">850g</h4>
+                <h4 class="text3">Dạng hộp</h4>
+                <h4 class="text3">Uống nóng 1 gói hòa tan cùng 75ml nước nóng, có thể thêm đá để uống lạnh</h4>
+                <h4 class="text3">Dùng kéo cắt bao gói, gấp kẹp để bảo quản miệng bao. Bảo quản nơi khô ráo, thoáng mát</h4>
+            </div>
+        </div>
+        </div>
+    </div>
+        <div class="rightcolumn">
+            <div class="card">
+                 <h2>Giới Thiệu</h2>
+                 <iframe width="250" height="130" src="https://www.youtube.com/embed/h_EATZ9T1cs" allowfullscreen></iframe>
+                 <p>Những hạt cà phê chất lượng được mang đến từ nông trường hữu cơ</p>
+            </div>
+            <div class="card">
+                <h2>Liên hệ</h2>
+                <p>Điện thoại: 0825144923</p>
+                <p>Email: cofeehaohang@gmail.com</p>
+           </div>
+           <div class="card">
+            <h2>Follow Me</h2>
+            <img width="50%" src="./icon wed/folow.jpg">
+         </div>
+        </div>     
+    </div>
+    <div class="footer">
+        <h4>Cảm ơn quý khách đã sử dụng sản phẩm</h4>
+    </div>
+</body>
+</html>

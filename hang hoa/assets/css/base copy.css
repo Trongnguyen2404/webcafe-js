@@ -1,0 +1,254 @@
+
+/* Reset CSS */
+*{
+    /* Emmet */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.khoangcachtop10px
+{
+    padding: 10px 0px 0px 0px;
+}
+/* Style the top navigation bar */
+.imgtop
+{
+    padding: 10px 0px 0px 0px;
+}
+.topnav 
+{
+    overflow:hidden;
+    background-color: #929023;
+    display: block;
+    text-decoration: none;
+    border-radius: 50px 0px 50px 0px;
+}
+    /* Định dạng link điều hướng */
+.topnav a 
+{ 
+    float: left; 
+    display:block; 
+    color: #f2f2f2; 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none;
+}
+.trangchu
+{
+    background-color:#9f8216;
+    border-radius: 50px 0;
+}
+.dangki
+{
+    text-decoration: none;
+    color: #f2f2f2; 
+    padding: 10px 20px 10px 25px;
+
+}
+.Dangki1
+{
+    float: right; 
+    display: block;
+    background-color:#9f6116;
+    border-radius: 0px 0px 0px 146px;
+
+}
+#top
+{
+    border-radius: 50px 0px 0px 0px;
+    background-color: #aae3db;
+}
+    /* Thay đổi màu liên kết khi di chuột qua */
+.topnav a:hover 
+{
+    background-color: #c9d981; 
+    color: white;
+} 
+.row
+{
+    background-color: #ada2a2; 
+}
+.row > div 
+{
+    text-align: center;
+}
+/* Tạo hai cột không bằng nhau, float cạnh nhau */ /* Cột trái */
+.leftcolumn { 
+    float: left; 
+    width: 75%;
+    background-color: #fff;
+}
+/* Cột phải */ 
+.rightcolumn
+{ 
+    float: left; 
+    width: 25%;
+    padding-left: 20px;
+} 
+/* Hình ảnh bài viết*/
+.image 
+{ 
+width:100%; 
+height:200px; 
+}
+    /* Thêm định dạng thẻ cho bài viết */
+.card-news 
+{
+    width:30%;
+    background-color: white ;
+    padding: 20px; margin: 10px;
+    float: left;
+}
+    /* Clear float khác sau các cột */
+.row:after 
+{ 
+    content: "";
+    display: table; clear: both;
+}  
+.card 
+{
+    background-color: white;
+    padding:20px; 
+    margin-top: 20px; 
+    text-align:center;
+   } 
+   /* Footer */ 
+   .footer { padding: 10px; text-align: center; background: white;
+margin-top: 10px;
+}
+
+.menuimg {
+    font-family: Arial, sans-serif;
+    text-align: center;
+} 
+
+h1 {
+    color: #333;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.image-container {
+    margin: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+.image-container img {
+    width: 300px; /* Đặt kích thước rộng là 300px */
+    height: 300px; /* Đặt kích thước cao là 300px */
+}
+
+.leftcolumn1 { 
+    padding: 20px 0px 0px 0px;
+    float: left; 
+    width: 40%;
+    background-color: #fff;
+}
+.rightcolumn1
+{
+    
+    padding: 20px 0px 0px 0px;
+    float: left; 
+    width: 60%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    list-style: none;
+}
+.money
+{
+    color: red;
+}
+.oldmoney
+{
+    text-decoration-line: line-through;
+    color: #ada2a2;
+    font-size: 15px;
+}
+.money, .oldmoney {
+    display: inline-block;
+    margin-right: 4px; /* Tạo khoảng cách giữa các phần tử */
+    padding-top: 10px;
+
+}
+.MuaHang
+{
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(99, 171, 26);
+    text-align: center;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px 50px 50px 50px;
+}
+.rightcolumn1 .MuaHang:hover
+{
+    background-color: #05560a;
+    color: black;
+    cursor: pointer;
+}
+.center{
+    padding: 20px 0px 0px 0px;
+    float: left; 
+    width: 100%;
+    display: block;
+
+}
+.text1
+{
+    text-align: left;
+    padding: 5px 0 5px 0;
+}
+.text2
+{
+    text-align: left;
+    padding: 10px 0px 5px 30px;
+    border: 1px solid #333;
+
+    background-color: #bab7b7;
+    font-size: 20px;
+}
+.text3
+{
+    text-align: left;
+    padding: 10px 0px 5px 30px;
+    border: 1px solid #333;
+    background-color: #bab7b7;
+    font-size: 20px;
+}
+.thongtin1
+{
+    width: 18%;
+    float: left;
+}
+.thongtin2
+{
+    width: 82%;
+    float: left;
+}
